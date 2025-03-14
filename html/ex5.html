@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tut7 - Ex5</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  
+  <script src="../js/ex5.js"></script>
+
+  <center>
+  <h2>Number Table</h2>
+  <div id="output"></div>
+
+  <script>
+
+      // this will create a table element
+      const table = document.createElement('table');
+
+      // This is to loop the numbers up to 12
+      for (let i = 1; i <= 12; i++)
+      
+      {
+          // this will create a table row
+          const row = document.createElement('tr');
+
+          // this will create a table cell & adding a border
+          const cell = document.createElement('td');
+          cell.style.border = '1px solid black';
+
+          // this will check if the number is divisible by 4
+          if (i % 4 === 0)
+          
+          {
+              // Add the blue-background class
+              cell.classList.add('blue-background');
+          }
+
+          // This will set the cell's text content
+          cell.textContent = i;
+
+          // This will add the cell to the row
+          row.appendChild(cell);
+
+          // this will add the row inside the table
+          table.appendChild(row);
+      }
+
+      // Append the table to the output div
+      document.getElementById('output').appendChild(table);
+  </script>
+  </center>
+
+</body>
+</html>

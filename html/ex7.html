@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tut7 - Ex7</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+    <title>Sum of Two Integers</title>
+</head>
+<body>
+    <h3>Sum of two Integers</h3>
+    <div id="content"></div>
+
+    <script>
+        function displaySumOrError()
+        
+        {
+            // This will prompt the user for two inputs
+            let num1 = prompt("Enter the first integer:");
+            let num2 = prompt("Enter the second integer:");
+
+            // This will check if inputs are valid integers
+            if (!Number.isInteger(Number(num1)) || !Number.isInteger(Number(num2)))
+            
+            {
+                // This will display error message (if there's any)
+                document.getElementById('content').innerHTML = `<span style="color:red; font-weight:bold;">Error! You must enter integers. You entered "${num1}" and "${num2}". Try again.</span>`;
+            } else
+            
+            {
+                // THis is to calculate the sum
+                let sum = Number(num1) + Number(num2);
+                // Display the sum
+                document.getElementById('content').innerHTML = `<span style="color:red; font-weight:bold;">${num1} + ${num2} = ${sum}</span>`;
+            }
+        }
+
+        displaySumOrError();
+    </script>
+</body>
+</html>
